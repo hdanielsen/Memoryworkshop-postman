@@ -149,9 +149,9 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "{{BaseUrl}}inventory transactions",
+          "raw": "{{BaseUrl}}inventoryTransactions",
           "host": [
-            "{{BaseUrl}}inventory transactions"
+            "{{BaseUrl}}inventoryTransactions"
           ]
         }
       },
@@ -175,7 +175,13 @@
       "name": "Get purchase orders",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}purchaseOrders",
+          "host": [
+            "{{BaseUrl}}purchaseOrders"
+          ]
+        }
       },
       "response": []
     },
@@ -183,7 +189,13 @@
       "name": "Get invoices",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}invoices",
+          "host": [
+            "{{BaseUrl}}invoices"
+          ]
+        }
       },
       "response": []
     },
@@ -191,7 +203,13 @@
       "name": "Get items",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}items",
+          "host": [
+            "{{BaseUrl}}items"
+          ]
+        }
       },
       "response": []
     },
@@ -199,7 +217,13 @@
       "name": "Get local defaults",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}localDefaults",
+          "host": [
+            "{{BaseUrl}}localDefaults"
+          ]
+        }
       },
       "response": []
     },
@@ -207,7 +231,13 @@
       "name": "Get order lines",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}orderlines",
+          "host": [
+            "{{BaseUrl}}orderlines"
+          ]
+        }
       },
       "response": []
     },
@@ -215,7 +245,13 @@
       "name": "Get purchase order lines",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}purchaseOrderLines",
+          "host": [
+            "{{BaseUrl}}purchaseOrderLines"
+          ]
+        }
       },
       "response": []
     },
@@ -223,7 +259,13 @@
       "name": "Get purchase orders",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}purchaseOrders",
+          "host": [
+            "{{BaseUrl}}purchaseOrders"
+          ]
+        }
       },
       "response": []
     },
@@ -231,7 +273,13 @@
       "name": "Get reference calls",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}refCalls",
+          "host": [
+            "{{BaseUrl}}refCalls"
+          ]
+        }
       },
       "response": []
     },
@@ -239,7 +287,13 @@
       "name": "Get sales representatives",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}salesReps",
+          "host": [
+            "{{BaseUrl}}salesReps"
+          ]
+        }
       },
       "response": []
     },
@@ -247,7 +301,13 @@
       "name": "Get ship tos",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}shipTos",
+          "host": [
+            "{{BaseUrl}}shipTos"
+          ]
+        }
       },
       "response": []
     },
@@ -255,7 +315,13 @@
       "name": "Get states",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}states",
+          "host": [
+            "{{BaseUrl}}states"
+          ]
+        }
       },
       "response": []
     },
@@ -263,7 +329,13 @@
       "name": "Get suppliers",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}suppliers",
+          "host": [
+            "{{BaseUrl}}suppliers"
+          ]
+        }
       },
       "response": []
     },
@@ -271,7 +343,13 @@
       "name": "Get supplier item cross references",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}supplierItemXrefs",
+          "host": [
+            "{{BaseUrl}}supplierItemXrefs"
+          ]
+        }
       },
       "response": []
     },
@@ -279,7 +357,13 @@
       "name": "Get time sheets",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}timeSheets",
+          "host": [
+            "{{BaseUrl}}timeSheets"
+          ]
+        }
       },
       "response": []
     },
@@ -287,7 +371,13 @@
       "name": "Get vacations",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}vacations",
+          "host": [
+            "{{BaseUrl}}vacations"
+          ]
+        }
       },
       "response": []
     },
@@ -295,7 +385,13 @@
       "name": "Get warehouses",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}warehouses",
+          "host": [
+            "{{BaseUrl}}warehouses"
+          ]
+        }
       },
       "response": []
     }
