@@ -1,0 +1,366 @@
+{
+  "info": {
+    "_postman_id": "f70bd6b6-b488-492a-a624-861658e0cb13",
+    "name": "Update data",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57401998",
+    "_collection_link": "https://go.postman.co/collection/57401998-f70bd6b6-b488-492a-a624-861658e0cb13?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Update benefits",
+      "item": [
+        {
+          "name": "Post benefits",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"BenefitDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"benefits\": [\r\n      {\r\n        \"dependentCare\": 1500,\r\n        \"empNum\": 30,\r\n        \"healthCare\": \"BlueCross\",\r\n        \"lifeInsurance\": 160000,\r\n        \"medicalSpending\": 1000,\r\n        \"pension401K\": 15,\r\n        \"stockPurchase\": 10\r\n      },\r\n      {\r\n        \"dependentCare\": 5000,\r\n        \"empNum\": 31,\r\n        \"healthCare\": \"BlueCross\",\r\n        \"lifeInsurance\": 150000,\r\n        \"medicalSpending\": 3500,\r\n        \"pension401K\": 15,\r\n        \"stockPurchase\": 25\r\n      },\r\n      {\r\n        \"dependentCare\": 10000,\r\n        \"empNum\": 32,\r\n        \"healthCare\": \"BlueCross\",\r\n        \"lifeInsurance\": 100000,\r\n        \"medicalSpending\": 20000,\r\n        \"pension401K\": 5,\r\n        \"stockPurchase\": 10\r\n      }\r\n    ]\r\n \r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}benefits",
+              "host": [
+                "{{BaseUrl}}benefits"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete benefits",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{BenefitDeleteBody}}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}benefits",
+              "host": [
+                "{{BaseUrl}}benefits"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Update bill tos",
+      "item": [
+        {
+          "name": "Post bill tos",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"BillToDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"billTos\": [\r\n      {\r\n        \"address\": \"5000 Alabama St\",\r\n        \"address2\": \"Suite 278\",\r\n        \"billToID\": 3,\r\n        \"city\": \"Montgomery\",\r\n        \"contact\": \"Flint Stone\",\r\n        \"custNum\": 3005,\r\n        \"name\": \"AL - Finance Office\",\r\n        \"phone\": \"(334) 123-1234\",\r\n        \"postalCode\": \"36117\",\r\n        \"state\": \"AL\"\r\n      },\r\n      {\r\n        \"address\": \"313 Peachtree St.\",\r\n        \"address2\": \"Suite 1200\",\r\n        \"billToID\": 4,\r\n        \"city\": \"Atanta\",\r\n        \"contact\": \"Sally Horn\",\r\n        \"custNum\": 3005,\r\n        \"name\": \"GA - Finance Offc.\",\r\n        \"phone\": \"(770) 432-4321\",\r\n        \"postalCode\": \"30123\",\r\n        \"state\": \"GA\"\r\n      }\r\n    ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}billTos",
+              "host": [
+                "{{BaseUrl}}billTos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete bill tos",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{BillToDeleteBody}}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}billTos",
+              "host": [
+                "{{BaseUrl}}billTos"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Update bins",
+      "item": [
+        {
+          "name": "Post bins",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  "  \"BinDeleteBody\",\r",
+                  "   JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{  \r\n  \"bins\": \r\n    [\r\n\r\n      {\r\n        \"binName\": \"899891-F\",\r\n        \"binNum\": 0,\r\n        \"itemNum\": 51,\r\n        \"quantity\": 0,\r\n        \"warehouseNum\": 14\r\n      },\r\n      {\r\n        \"binName\": \"400059-G\",\r\n        \"binNum\": 1,\r\n        \"itemNum\": 52,\r\n        \"quantity\": 0,\r\n        \"warehouseNum\": 14\r\n      },\r\n      {\r\n        \"binName\": \"265324-T\",\r\n        \"binNum\": 2,\r\n        \"itemNum\": 53,\r\n        \"quantity\": 449,\r\n        \"warehouseNum\": 14\r\n      },\r\n      {\r\n        \"binName\": \"123435-E\",\r\n        \"binNum\": 3,\r\n        \"itemNum\": 54,\r\n        \"quantity\": 640,\r\n        \"warehouseNum\": 14\r\n      },\r\n      {\r\n        \"binName\": \"564321-T\",\r\n        \"binNum\": 4,\r\n        \"itemNum\": 55,\r\n        \"quantity\": 0,\r\n        \"warehouseNum\": 14\r\n      }\r\n    ]\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}bins",
+              "host": [
+                "{{BaseUrl}}bins"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete bins",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{BinDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}bins",
+              "host": [
+                "{{BaseUrl}}bins"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Update families",
+      "item": [
+        {
+          "name": "Post families",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"FamilyDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"families\": [\r\n      {\r\n        \"benefitDate\": \"2024-01-15\",\r\n        \"birthDate\": \"2009-01-15\",\r\n        \"coveredOnBenefits\": true,\r\n        \"empNum\": 23,\r\n        \"relation\": \"Daughter\",\r\n        \"relativeName\": \"Miranda Bring\"\r\n      },\r\n      {\r\n        \"benefitDate\": \"2018-03-16\",\r\n        \"birthDate\": \"2011-12-07\",\r\n        \"coveredOnBenefits\": true,\r\n        \"empNum\": 23,\r\n        \"relation\": \"Son\",\r\n        \"relativeName\": \"John Bring\"\r\n      }\r\n   ]   \r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}families",
+              "host": [
+                "{{BaseUrl}}families"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete families",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{FamilyDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}families",
+              "host": [
+                "{{BaseUrl}}families"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Update customers",
+      "item": []
+    },
+    {
+      "name": "Update departments",
+      "item": []
+    },
+    {
+      "name": "Update employees",
+      "item": []
+    },
+    {
+      "name": "Update invoices",
+      "item": [
+        {
+          "name": "Update time sheets",
+          "item": []
+        }
+      ]
+    },
+    {
+      "name": "Update items",
+      "item": []
+    },
+    {
+      "name": "Update local defaults",
+      "item": []
+    },
+    {
+      "name": "Update orders",
+      "item": []
+    },
+    {
+      "name": "Update purchase orders",
+      "item": []
+    },
+    {
+      "name": "Update reference calls",
+      "item": []
+    },
+    {
+      "name": "Update sales representatives",
+      "item": []
+    },
+    {
+      "name": "Update ship tos",
+      "item": []
+    },
+    {
+      "name": "Update suppliers",
+      "item": []
+    },
+    {
+      "name": "Update vacations",
+      "item": []
+    },
+    {
+      "name": "Update warehouses",
+      "item": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "BinDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "FamilyDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "BenefitDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "BillToDeleteBody",
+      "value": ""
+    }
+  ]
+}
