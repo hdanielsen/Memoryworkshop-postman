@@ -285,22 +285,277 @@
     },
     {
       "name": "Update customers",
-      "item": []
+      "item": [
+        {
+          "name": "Post customers",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"CustomerDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\"customers\": \r\n    [\r\n      {\r\n        \"address\": \"333 North Drive\",\r\n        \"address2\": \"\",\r\n        \"balance\": 234,\r\n        \"city\": \"Burlington\",\r\n        \"comments\": \"This customer is on credit hold.\",\r\n        \"contact\": \"Gloria Shepley\",\r\n        \"country\": \"USA\",\r\n        \"creditLimit\": 30000,\r\n        \"custNum\": 1,\r\n        \"discount\": 35,\r\n        \"emailAddress\": \"\",\r\n        \"fax\": \"\",\r\n        \"name\": \"Stomper\",\r\n        \"phone\": \"(617) 332-0006\",\r\n        \"postalCode\": \"01730\",\r\n        \"salesRep\": \"HXM\",\r\n        \"state\": \"MA\",\r\n        \"terms\": \"Net30\"\r\n      },\r\n      {\r\n        \"address\": \"42 Main Street\",\r\n        \"address2\": \"\",\r\n        \"balance\": 0,\r\n        \"city\": \"Burlington\",\r\n        \"comments\": \"This customer is weird.\",\r\n        \"contact\": \"Damian Naper\",\r\n        \"country\": \"USA\",\r\n         \"custNum\": 2,\r\n        \"creditLimit\": 1200,\r\n        \"discount\": 10,\r\n        \"emailAddress\": \"\",\r\n        \"fax\": \"\",\r\n        \"name\": \"Vintage Funk\",\r\n        \"phone\": \"(617) 442-0344\",\r\n        \"postalCode\": \"01730\",\r\n        \"salesRep\": \"HXM\",\r\n        \"state\": \"MA\",\r\n        \"terms\": \"Net30\"\r\n      }\r\n  ]\r\n} \r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}customers",
+              "host": [
+                "{{BaseUrl}}customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete customers",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{CustomerDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}customers",
+              "host": [
+                "{{BaseUrl}}customers"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     },
     {
       "name": "Update departments",
-      "item": []
+      "item": [
+        {
+          "name": "Post departments",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"DepartmentDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"departments\": [\r\n      {\r\n        \"deptCode\": \"900\",\r\n        \"deptName\": \"Human Resources\"\r\n      },\r\n      {\r\n        \"deptCode\": \"910\",\r\n        \"deptName\": \"Security\"\r\n      },\r\n      {\r\n        \"deptCode\": \"920\",\r\n        \"deptName\": \"Procurement\"\r\n      }\r\n    ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}departments",
+              "host": [
+                "{{BaseUrl}}departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete departments",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{DepartmentDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}departments",
+              "host": [
+                "{{BaseUrl}}departments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     },
     {
       "name": "Update employees",
-      "item": []
+      "item": [
+        {
+          "name": "Post employees",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"EmployeeDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"employees\": [\r\n      {\r\n        \"address\": \"53 Main Street\",\r\n        \"address2\": \"Apt 304\",\r\n        \"birthDate\": \"1967-10-28\",\r\n        \"city\": \"Houston\",\r\n        \"deptCode\": \"100\",\r\n        \"empNum\": 1,\r\n        \"firstName\": \"Alan\",\r\n        \"homePhone\": \"(214) 644-4657\",\r\n        \"lastName\": \"Angelo\",\r\n        \"position\": \"Consultant\",\r\n        \"postalCode\": \"75024\",\r\n        \"sickDaysLeft\": 5,\r\n        \"startDate\": \"2019-05-06\",\r\n        \"state\": \"TX\",\r\n        \"vacationDaysLeft\": 8,\r\n        \"workPhone\": \"(214) 399-4600\"\r\n      },\r\n      {\r\n        \"address\": \"20 Smith St\",\r\n        \"address2\": \"\",\r\n        \"birthDate\": \"1980-12-12\",\r\n        \"city\": \"Bedford\",\r\n        \"deptCode\": \"100\",\r\n        \"empNum\": 2,\r\n        \"firstName\": \"Maria\",\r\n        \"homePhone\": \"(617) 555-1111\",\r\n        \"lastName\": \"D'Delangelo\",\r\n        \"position\": \"Consultant\",\r\n        \"postalCode\": \"66766\",\r\n        \"sickDaysLeft\": 0,\r\n        \"startDate\": \"2024-11-03\",\r\n        \"state\": \"GA\",\r\n        \"vacationDaysLeft\": 0,\r\n        \"workPhone\": \"(617) 280-4599\"\r\n      } \r\n    ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}employees",
+              "host": [
+                "{{BaseUrl}}employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete employees",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{EmployeeDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}employees",
+              "host": [
+                "{{BaseUrl}}employees"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
     },
     {
       "name": "Update invoices",
       "item": [
         {
-          "name": "Update time sheets",
-          "item": []
+          "name": "Post invoices",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "\r",
+                  "pm.collectionVariables.set(\r",
+                  " \"InvoiceDeleteBody\",\r",
+                  " JSON.stringify(response.response)\r",
+                  ");"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"invoices\": [\r\n  \r\n      {\r\n        \"adjustment\": 50.0,\r\n        \"amount\": 541.75,\r\n        \"custNum\": 3025,\r\n        \"invoiceDate\": \"2023-05-24\",\r\n        \"invoicenum\": 1,\r\n        \"orderNum\": 10670,\r\n        \"shipCharge\": 81.26,\r\n        \"totalPaid\": 600.0\r\n      },\r\n      {\r\n        \"adjustment\": 70.0,\r\n        \"amount\": 1367.35,\r\n        \"custNum\": 3220,\r\n        \"invoiceDate\": \"2023-08-23\",\r\n        \"invoicenum\": 2,\r\n        \"orderNum\": 10675,\r\n        \"shipCharge\": 205.1,\r\n        \"totalPaid\": 1300.0\r\n      },\r\n      {\r\n        \"adjustment\": 200.0,\r\n        \"amount\": 15147.81,\r\n        \"custNum\": 3110,\r\n        \"invoiceDate\": \"2023-03-28\",\r\n        \"invoicenum\": 3,\r\n        \"orderNum\": 10685,\r\n        \"shipCharge\": 2272.17,\r\n        \"totalPaid\": 15000.0\r\n      }\r\n   ]\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}invoices",
+              "host": [
+                "{{BaseUrl}}invoices"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete invoices",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{InvoiceDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}invoices",
+              "host": [
+                "{{BaseUrl}}invoices"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -341,6 +596,10 @@
       "item": []
     },
     {
+      "name": "Update time sheets",
+      "item": []
+    },
+    {
       "name": "Update warehouses",
       "item": []
     }
@@ -360,6 +619,22 @@
     },
     {
       "key": "BillToDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "CustomerDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "DepartmentDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "EmployeeDeleteBody",
+      "value": ""
+    },
+    {
+      "key": "InvoiceDeleteBody",
       "value": ""
     }
   ]
