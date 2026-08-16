@@ -18,11 +18,12 @@
               "script": {
                 "exec": [
                   "let response = pm.response.json();\r",
-                  "\r",
-                  "pm.collectionVariables.set(\r",
-                  " \"BenefitDeleteBody\",\r",
-                  " JSON.stringify(response.response)\r",
-                  ");"
+                  "if (pm.response.code===200) {\r",
+                  "        pm.collectionVariables.set(\r",
+                  "        \"BenefitDeleteBody\",\r",
+                  "        JSON.stringify(response.response)   \r",
+                  "    );\r",
+                  "};"
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -225,11 +226,13 @@
               "script": {
                 "exec": [
                   "let response = pm.response.json();\r",
-                  "\r",
-                  "pm.collectionVariables.set(\r",
-                  " \"FamilyDeleteBody\",\r",
-                  " JSON.stringify(response.response)\r",
-                  ");"
+                  "if (pm.response.code===200) {\r",
+                  "        pm.collectionVariables.set(\r",
+                  "        \"FamilyDeleteBody\",\r",
+                  "        JSON.stringify(response.response)   \r",
+                  "    );\r",
+                  "};\r",
+                  ""
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -1317,6 +1320,37 @@
           "response": []
         }
       ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          "pm.test(\"Request succeeded\", function () {\r",
+          "    if (pm.request.method===\"DELETE\")  {\r",
+          "        pm.expect(pm.response.code).to.be.oneOf([200,204]);\r",
+          "    } \r",
+          "    else {\r",
+          "        pm.expect(pm.response.code).to.eql(200);\r",
+          "    } ;    \r",
+          "});"
+        ]
+      }
     }
   ],
   "variable": [
