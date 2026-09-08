@@ -216,77 +216,6 @@
       ]
     },
     {
-      "name": "Update families",
-      "item": [
-        {
-          "name": "Post families",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "let response = pm.response.json();\r",
-                  "if (pm.response.code===200) {\r",
-                  "        pm.collectionVariables.set(\r",
-                  "        \"FamilyDeleteBody\",\r",
-                  "        JSON.stringify(response.response)   \r",
-                  "    );\r",
-                  "};\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "packages": {},
-                "requests": {}
-              }
-            }
-          ],
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n    \"families\": [\r\n      {\r\n        \"benefitDate\": \"2024-01-15\",\r\n        \"birthDate\": \"2009-01-15\",\r\n        \"coveredOnBenefits\": true,\r\n        \"empNum\": 23,\r\n        \"relation\": \"Daughter\",\r\n        \"relativeName\": \"Miranda Bring\"\r\n      },\r\n      {\r\n        \"benefitDate\": \"2018-03-16\",\r\n        \"birthDate\": \"2011-12-07\",\r\n        \"coveredOnBenefits\": true,\r\n        \"empNum\": 23,\r\n        \"relation\": \"Son\",\r\n        \"relativeName\": \"John Bring\"\r\n      }\r\n   ]   \r\n}\r\n",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BaseUrl}}families",
-              "host": [
-                "{{BaseUrl}}families"
-              ]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Delete families",
-          "request": {
-            "method": "DELETE",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{{FamilyDeleteBody}}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BaseUrl}}families",
-              "host": [
-                "{{BaseUrl}}families"
-              ]
-            }
-          },
-          "response": []
-        }
-      ]
-    },
-    {
       "name": "Update customers",
       "item": [
         {
@@ -486,6 +415,77 @@
               "raw": "{{BaseUrl}}employees",
               "host": [
                 "{{BaseUrl}}employees"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Update families",
+      "item": [
+        {
+          "name": "Post families",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "let response = pm.response.json();\r",
+                  "if (pm.response.code===200) {\r",
+                  "        pm.collectionVariables.set(\r",
+                  "        \"FamilyDeleteBody\",\r",
+                  "        JSON.stringify(response.response)   \r",
+                  "    );\r",
+                  "};\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"families\": [\r\n      {\r\n        \"benefitDate\": \"2024-01-15\",\r\n        \"birthDate\": \"2009-01-15\",\r\n        \"coveredOnBenefits\": true,\r\n        \"empNum\": 23,\r\n        \"relation\": \"Daughter\",\r\n        \"relativeName\": \"Miranda Bring\"\r\n      },\r\n      {\r\n        \"benefitDate\": \"2018-03-16\",\r\n        \"birthDate\": \"2011-12-07\",\r\n        \"coveredOnBenefits\": true,\r\n        \"empNum\": 23,\r\n        \"relation\": \"Son\",\r\n        \"relativeName\": \"John Bring\"\r\n      }\r\n   ]   \r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}families",
+              "host": [
+                "{{BaseUrl}}families"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete families",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{{FamilyDeleteBody}}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}families",
+              "host": [
+                "{{BaseUrl}}families"
               ]
             }
           },

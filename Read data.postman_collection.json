@@ -9,6 +9,26 @@
   },
   "item": [
     {
+      "name": "Get addresses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}addresses?top=200",
+          "host": [
+            "{{BaseUrl}}addresses"
+          ],
+          "query": [
+            {
+              "key": "top",
+              "value": "200"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Get benefits",
       "request": {
         "method": "GET",
@@ -149,34 +169,6 @@
       "response": []
     },
     {
-      "name": "Get orders",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{BaseUrl}}orders",
-          "host": [
-            "{{BaseUrl}}orders"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Get purchase orders",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{BaseUrl}}purchaseOrders",
-          "host": [
-            "{{BaseUrl}}purchaseOrders"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "Get invoices",
       "request": {
         "method": "GET",
@@ -219,6 +211,20 @@
       "response": []
     },
     {
+      "name": "Get orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}orders",
+          "host": [
+            "{{BaseUrl}}orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Get order lines",
       "request": {
         "method": "GET",
@@ -233,20 +239,6 @@
       "response": []
     },
     {
-      "name": "Get purchase order lines",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "{{BaseUrl}}purchaseOrderLines",
-          "host": [
-            "{{BaseUrl}}purchaseOrderLines"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "Get purchase orders",
       "request": {
         "method": "GET",
@@ -255,6 +247,20 @@
           "raw": "{{BaseUrl}}purchaseOrders",
           "host": [
             "{{BaseUrl}}purchaseOrders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get purchase order lines",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}purchaseOrderLines",
+          "host": [
+            "{{BaseUrl}}purchaseOrderLines"
           ]
         }
       },
@@ -382,6 +388,17 @@
           "host": [
             "{{BaseUrl}}warehouses"
           ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
         }
       },
       "response": []
