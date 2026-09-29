@@ -1,0 +1,112 @@
+{
+  "info": {
+    "_postman_id": "9c34b89b-53e0-4a0d-968b-a2b8f73ce086",
+    "name": "Xtra",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57401998",
+    "_collection_link": "https://go.postman.co/collection/57401998-9c34b89b-53e0-4a0d-968b-a2b8f73ce086?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get customers expand",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}customers?expand=orders/orderlines&top=20",
+          "host": [
+            "{{BaseUrl}}customers"
+          ],
+          "query": [
+            {
+              "key": "expand",
+              "value": "orders/orderlines"
+            },
+            {
+              "key": "top",
+              "value": "20"
+            }
+          ]
+        },
+        "description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+      },
+      "response": []
+    },
+    {
+      "name": "Get orders expand",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BaseUrl}}orders?expand=billtos,shiptos",
+          "host": [
+            "{{BaseUrl}}orders"
+          ],
+          "query": [
+            {
+              "key": "expand",
+              "value": "billtos,shiptos"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete supplier with active PO",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 400\", function () {\r\n    pm.response.to.have.status(400);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"suppliers\": [\r\n      {\r\n        \"address\": \"321321 North Ave\",\r\n        \"address2\": \"\",\r\n        \"city\": \"Boston\",\r\n        \"comments\": \"\",\r\n        \"country\": \"USA\",\r\n        \"discount\": 1,\r\n        \"loginDate\": \"1998-03-17\",\r\n        \"name\": \"ABC Sports Supplies\",\r\n        \"password\": \"\",\r\n        \"phone\": \"617 677-8889\",\r\n        \"postalCode\": \"01083\",\r\n        \"shipAmount\": 100,\r\n        \"state\": \"MA\",\r\n        \"supplierIDNum\": 5,\r\n        \"items\": [\r\n          {\r\n            \"allocated\": 9399,\r\n            \"catDescription\": \"These real shark-skin fins will knock 'em dead at the beach. They'll see you coming from miles away while you're wearing the Original \\\"Fins\\\" by Bench\\/Lee. \",\r\n            \"category1\": \"Diving\",\r\n            \"category2\": \"Footwear\",\r\n            \"catPage\": 1,\r\n            \"itemImage\": null,\r\n            \"itemName\": \"Fins\",\r\n            \"itemNum\": 1,\r\n            \"minQuantity\": 5,\r\n            \"onHand\": 13022,\r\n            \"onOrder\": 433,\r\n            \"price\": 24.0,\r\n            \"reOrder\": 1,\r\n            \"special\": \"1\",\r\n            \"weight\": 4.0\r\n          },\r\n          {\r\n            \"allocated\": 10548,\r\n            \"catDescription\": \"ANSI, ASCII, VHS, TCP\\/IP approved Cycle Helmets. You'll be styling around town in no time.  Safety First with the official Cycle Helmet of the Iowa Racing Team.\",\r\n            \"category1\": \"Biking\",\r\n            \"category2\": \"Equipment\",\r\n            \"catPage\": 4,\r\n            \"itemImage\": null,\r\n            \"itemName\": \"Cycle Helmet\",\r\n            \"itemNum\": 4,\r\n            \"minQuantity\": 10,\r\n            \"onHand\": 12977,\r\n            \"onOrder\": 546,\r\n            \"price\": 75.0,\r\n            \"reOrder\": 41,\r\n            \"special\": \"1\",\r\n            \"weight\": 7.0\r\n          },\r\n          {\r\n            \"allocated\": 10876,\r\n            \"catDescription\": \"Stay afloat with your own helium buoyancy vest.  \",\r\n            \"category1\": \"Diving\",\r\n            \"category2\": \"Equipment\",\r\n            \"catPage\": 7,\r\n            \"itemImage\": null,\r\n            \"itemName\": \"Buoyancy Vest\",\r\n            \"itemNum\": 7,\r\n            \"minQuantity\": 30,\r\n            \"onHand\": 12877,\r\n            \"onOrder\": 479,\r\n            \"price\": 125.0,\r\n            \"reOrder\": 15,\r\n            \"special\": \"1\",\r\n            \"weight\": 8.0\r\n          },\r\n          {\r\n            \"allocated\": 10788,\r\n            \"catDescription\": \"Whether it's a quick jog or a long run, this vest is a must.\",\r\n            \"category1\": \"Running\",\r\n            \"category2\": \"Equipment\",\r\n            \"catPage\": 30,\r\n            \"itemImage\": null,\r\n            \"itemName\": \"Runner's Vest\",\r\n            \"itemNum\": 8,\r\n            \"minQuantity\": 25,\r\n            \"onHand\": 13035,\r\n            \"onOrder\": 427,\r\n            \"price\": 19.85,\r\n            \"reOrder\": 19,\r\n            \"special\": \"2\",\r\n            \"weight\": 2.0\r\n          }\r\n        ]\r\n      }\r\n    ]\r\n  }\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BaseUrl}}suppliers",
+          "host": [
+            "{{BaseUrl}}suppliers"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

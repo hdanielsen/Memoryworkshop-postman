@@ -502,17 +502,10 @@
             {
               "listen": "test",
               "script": {
-                "exec": [
-                  "let response = pm.response.json();\r",
-                  "\r",
-                  "pm.collectionVariables.set(\r",
-                  " \"InvoiceDeleteBody\",\r",
-                  " JSON.stringify(response.response)\r",
-                  ");"
-                ],
                 "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                "exec": [
+                  "let response = pm.response.json();\r\n\r\npm.collectionVariables.set(\r\n \"InvoiceDeleteBody\",\r\n JSON.stringify(response.response)\r\n);"
+                ]
               }
             }
           ],
@@ -521,7 +514,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"invoices\": [\r\n  \r\n      {\r\n        \"adjustment\": 50.0,\r\n        \"amount\": 541.75,\r\n        \"custNum\": 3025,\r\n        \"invoiceDate\": \"2023-05-24\",\r\n        \"invoicenum\": 1,\r\n        \"orderNum\": 10670,\r\n        \"shipCharge\": 81.26,\r\n        \"totalPaid\": 600.0\r\n      },\r\n      {\r\n        \"adjustment\": 70.0,\r\n        \"amount\": 1367.35,\r\n        \"custNum\": 3220,\r\n        \"invoiceDate\": \"2023-08-23\",\r\n        \"invoicenum\": 2,\r\n        \"orderNum\": 10675,\r\n        \"shipCharge\": 205.1,\r\n        \"totalPaid\": 1300.0\r\n      },\r\n      {\r\n        \"adjustment\": 200.0,\r\n        \"amount\": 15147.81,\r\n        \"custNum\": 3110,\r\n        \"invoiceDate\": \"2023-03-28\",\r\n        \"invoicenum\": 3,\r\n        \"orderNum\": 10685,\r\n        \"shipCharge\": 2272.17,\r\n        \"totalPaid\": 15000.0\r\n      }\r\n   ]\r\n }",
+              "raw": "{\r\n    \"invoices\": [\r\n  \r\n      {\r\n        \"invoicenum\": 1,\r\n        \"orderNum\": 10670\r\n      },\r\n      {\r\n        \"invoicenum\": 2,\r\n        \"orderNum\": 10675 \r\n      },\r\n      {\r\n        \"invoicenum\": 3,\r\n        \"orderNum\": 10685\r\n      }\r\n   ]\r\n }",
               "options": {
                 "raw": {
                   "language": "json"
@@ -709,17 +702,10 @@
             {
               "listen": "test",
               "script": {
-                "exec": [
-                  "let response = pm.response.json();\r",
-                  "\r",
-                  "pm.collectionVariables.set(\r",
-                  " \"OrderDeleteBody\",\r",
-                  " JSON.stringify(response.response)\r",
-                  ");"
-                ],
                 "type": "text/javascript",
-                "packages": {},
-                "requests": {}
+                "exec": [
+                  "let response = pm.response.json();\r\n\r\npm.collectionVariables.set(\r\n \"OrderDeleteBody\",\r\n JSON.stringify(response.response)\r\n);"
+                ]
               }
             }
           ],
@@ -728,7 +714,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"orders\": [\r\n      {\r\n        \"billToID\": 0,\r\n        \"carrier\": \"\",\r\n        \"creditCard\": \"American Express\",\r\n        \"custNum\": 3045,\r\n        \"instructions\": \"\",\r\n        \"orderDate\": \"2023-08-01\",\r\n        \"orderNum\": 0,\r\n        \"orderStatus\": \"Ordered\",\r\n        \"pO\": \"PO0927890999\",\r\n        \"promiseDate\": \"2026-08-29\",\r\n        \"salesRep\": \"BBB\",\r\n        \"shipDate\": null,\r\n        \"shipToID\": 0,\r\n        \"terms\": \"Net30\",\r\n        \"warehouseNum\": 0,\r\n        \"orderLines\": [\r\n          {\r\n            \"discount\": 10,\r\n            \"extendedPrice\": 131.22,\r\n            \"itemNum\": 54,\r\n            \"lineNum\": 1,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 4.86,\r\n            \"quantity\": 30\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"extendedPrice\": 450.77,\r\n            \"itemNum\": 55,\r\n            \"lineNum\": 2,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 23.85,\r\n            \"quantity\": 21\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"extendedPrice\": 631.44,\r\n            \"itemNum\": 53,\r\n            \"lineNum\": 3,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 8.77,\r\n            \"quantity\": 80\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"extendedPrice\": 828.0,\r\n            \"itemNum\": 28,\r\n            \"lineNum\": 4,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 23.0,\r\n            \"quantity\": 40\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"extendedPrice\": 2295.0,\r\n            \"itemNum\": 39,\r\n            \"lineNum\": 5,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 34.0,\r\n            \"quantity\": 75\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"extendedPrice\": 134.73,\r\n            \"itemNum\": 26,\r\n            \"lineNum\": 6,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 4.99,\r\n            \"quantity\": 30\r\n          }\r\n        ]\r\n      }  \r\n    ]\r\n \r\n}\r\n",
+              "raw": "{\r\n    \"orders\": [\r\n      {\r\n        \"billToID\": 0,\r\n        \"carrier\": \"\",\r\n        \"creditCard\": \"American Express\",\r\n        \"custNum\": 3045,\r\n        \"instructions\": \"\",\r\n        \"orderDate\": \"2026-10-02\",\r\n        \"orderNum\": 0,\r\n        \"orderStatus\": \"Ordered\",\r\n        \"pO\": \"PO0927890999\",\r\n        \"promiseDate\": \"2026-10-29\",\r\n        \"salesRep\": \"BBB\",\r\n        \"shipDate\": \"2026-10-05\",\r\n        \"shipToID\": 0,\r\n        \"terms\": \"Net30\",\r\n        \"warehouseNum\": 0,\r\n        \"orderLines\": [\r\n          {\r\n            \"discount\": 10,\r\n            \"itemNum\": 54,\r\n            \"lineNum\": 1,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 4.86,\r\n            \"quantity\": 30\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"itemNum\": 55,\r\n            \"lineNum\": 2,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 23.85,\r\n            \"quantity\": 21\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"itemNum\": 53,\r\n            \"lineNum\": 3,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 8.77,\r\n            \"quantity\": 80\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"itemNum\": 28,\r\n            \"lineNum\": 4,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 23.0,\r\n            \"quantity\": 40\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"itemNum\": 39,\r\n            \"lineNum\": 5,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 34.0,\r\n            \"quantity\": 75\r\n          },\r\n          {\r\n            \"discount\": 10,\r\n            \"itemNum\": 26,\r\n            \"lineNum\": 6,\r\n            \"orderLineStatus\": \"Shipped\",\r\n            \"price\": 4.99,\r\n            \"quantity\": 30\r\n          }\r\n        ]\r\n      }  \r\n    ]\r\n \r\n}\r\n",
               "options": {
                 "raw": {
                   "language": "json"
